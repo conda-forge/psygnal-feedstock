@@ -1,5 +1,5 @@
 {% set name = "psygnal" %}
-{% set version = "0.2.0" %}
+{% set version = "0.3.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 7339e6bb8784bc10330625239996b200e15ce38d78f67713bdb19479f97d2153
+  sha256: f2ebcb2ea0d876d9e378def20a016fc20597b34d618968749b4e014097e3202f
 
 build:
-  number: 1
+  number: 0
   skip: true  # [py<37]
   script: {{ PYTHON }} -m pip install . -vv
 
