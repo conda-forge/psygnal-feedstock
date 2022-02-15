@@ -1,5 +1,5 @@
 {% set name = "psygnal" %}
-{% set version = "0.2.0" %}
+{% set version = "0.3.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 7339e6bb8784bc10330625239996b200e15ce38d78f67713bdb19479f97d2153
+  sha256: dda19ce8c3b81145ac36d0a5810c52b1c7a1b6fd1745e9a3a6d48499a6213598
 
 build:
-  number: 1
+  number: 0
   skip: true  # [py<37]
   script: {{ PYTHON }} -m pip install . -vv
 
@@ -18,20 +18,23 @@ requirements:
   build:
     - python                                 # [build_platform != target_platform]
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
-    - cython                                 # [build_platform != target_platform]
+    - cython >=3.0.0a10                      # [build_platform != target_platform]
     - {{ compiler('cxx') }}
   host:
     - python
     - pip
-    - cython
+    - cython >=3.0.0a10
     - setuptools_scm
   run:
     - python
     - typing-extensions
+    - wrapt  # provides 'proxy' extra
 
 test:
   imports:
     - psygnal
+    - psygnal.containers
+    - psygnal.utils
   requires:
     - pip
   commands:
