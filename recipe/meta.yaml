@@ -29,6 +29,7 @@ requirements:
     - python
     - typing-extensions
     - wrapt  # provides 'proxy' extra
+    - importlib-metadata >=1.5.0 # [py<38]
 
 test:
   imports:
