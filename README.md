@@ -1,7 +1,7 @@
 About psygnal
 =============
 
-Home: https://github.com/pyapp-kit/psygnal
+Home: https://github.com/tlambert03/psygnal
 
 Package license: BSD-3-Clause
 
