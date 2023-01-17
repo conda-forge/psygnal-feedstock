@@ -22,7 +22,7 @@ requirements:
   host:
     - python
     - pip
-    - hatchling>=1.8.0
+    - hatchling >=1.8.0
     - hatch-vcs
   run:
     - python
