@@ -1,11 +1,11 @@
-About psygnal
-=============
+About psygnal-feedstock
+=======================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/psygnal-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/tlambert03/psygnal
 
 Package license: BSD-3-Clause
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/psygnal-feedstock/blob/main/LICENSE.txt)
 
 Summary: Pure python implementation of Qt Signals
 
