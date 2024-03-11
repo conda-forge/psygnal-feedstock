@@ -17,15 +17,13 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.7
+    - python >=3.8
     - hatchling >=1.8.0
     - hatch-vcs
   run:
-    - python >=3.7
-    - typing_extensions
-    - mypy_extensions
+    - python >=3.8
+    - typing_extensions  # not actually required at runtime
     - wrapt  # provides 'proxy' extra
-    - importlib-metadata >=1.5.0
 
 test:
   imports:
