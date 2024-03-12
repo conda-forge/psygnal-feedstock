@@ -1,5 +1,5 @@
 {% set name = "psygnal" %}
-{% set version = "0.9.5" %}
+{% set version = "0.10.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 4956ea6c36a75f7fc457558935b67dd8be2594661b4d08eeb3357d69c509c55f
+  sha256: db51c7efb8d92873ea2113356c0cbdca75383684d3e55c315a84071c46d0a0b0
 
 build:
   number: 0
@@ -17,15 +17,13 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.7
+    - python >=3.8
     - hatchling >=1.8.0
     - hatch-vcs
   run:
-    - python >=3.7
-    - typing_extensions
-    - mypy_extensions
+    - python >=3.8
+    - typing_extensions  # not actually required at runtime
     - wrapt  # provides 'proxy' extra
-    - importlib-metadata >=1.5.0
 
 test:
   imports:
