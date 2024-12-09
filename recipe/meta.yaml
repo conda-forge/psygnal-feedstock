@@ -6,22 +6,22 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: f9b02ca246ab0adb108c4010b4a486e464f940543201074591e50370cd7b0cc0
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install --no-deps . -vv
 
 requirements:
   host:
     - pip
-    - python >=3.8
+    - python {{ python_min }}
     - hatchling >=1.8.0
     - hatch-vcs
   run:
-    - python >=3.8
+    - python >={{ python_min }}
     - typing_extensions  # not actually required at runtime
     - wrapt  # provides 'proxy' extra
 
@@ -32,6 +32,7 @@ test:
     - psygnal.utils
   requires:
     - pip
+    - python {{ python_min }}
   commands:
     - pip check
 
