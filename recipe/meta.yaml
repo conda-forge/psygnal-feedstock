@@ -1,5 +1,5 @@
 {% set name = "psygnal" %}
-{% set version = "0.16.1" %}
+{% set version = "0.17.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 8e30df5e8f2a927191afacd22653924ba5ec54ca00f965f4af3ed38e37b727a9
+  sha256: 6fc6d071724cf4ca8a35f1f0d0c3c953518bcb0253ccb4fcc5ea54faf4aabfad
 
 build:
   number: 0
